@@ -5,7 +5,7 @@ This is a setup that uses:
  - Tailwind CSS
  - Postgres DB
 
-The get it up and running:
+To get it up and running:
 1. Make sure you have a redis server started
 2. Ruby version `3.1.2` already installed
 3. Rails version `7.0.4`
