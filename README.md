@@ -1,24 +1,25 @@
-# README
+# This is a repo I use to start most of my Rails 7 projects
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a setup that uses:
+ - ESBuild
+ - Tailwind CSS
+ - Postgres DB
 
-Things you may want to cover:
+The get it up and running:
+1. Make sure you have a redis server started
+2. Ruby version `3.1.2` already installed
+3. Rails version `7.0.4`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To use this project:
+1. Clone this repo
+```
+git clone git@github.com:antonzaharia/rails-7-boilerplate.git
+```
+2. Install dependencies
+```
+bundle install && yarn install
+```
+3. Setup your database
+```
+rails db:setup
+```
