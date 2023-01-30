@@ -27,3 +27,7 @@ rails db:setup
 ```
 bin/dev
 ```
+
+### Extras
+I already setup ToastifyJS to work as flash messages from Rails.
+The types available are: `:info, :error, :warning`
