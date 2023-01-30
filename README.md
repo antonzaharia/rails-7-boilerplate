@@ -23,3 +23,7 @@ bundle install && yarn install
 ```
 rails db:setup
 ```
+4. Start your server
+```
+bin/dev
+```
