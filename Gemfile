@@ -83,3 +83,5 @@ gem "factory_bot_rails", "~> 6.2"
 gem "faker", "~> 3.1"
 
 gem "rails-controller-testing", "~> 1.0"
+
+gem "rubocop", "~> 1.44"

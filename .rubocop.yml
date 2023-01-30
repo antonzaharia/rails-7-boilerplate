@@ -1,0 +1,48 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - db/schema.rb
+    - tmp/**/*
+    - node_modules/**/*
+    - hacky_scripts/**/*
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - qa
+
+# Underscores as numeric thousand separators
+Style/NumericLiterals:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
+
+Layout/BeginEndAlignment:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 720
+
+Metrics/ModuleLength:
+  Max: 500
+
+Lint/DuplicateMethods:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
