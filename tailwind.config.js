@@ -1,8 +1,101 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
+  important: true,
   content: [
-    './app/views/**/*.html.erb',
+    './public/*.html',
+    './app/**/*.html.erb',
     './app/helpers/**/*.rb',
-    './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
-  ]
+    './app/javascript/**/*.js',
+    './app/views/**/*.{erb,haml,html,slim}',
+    './node_modules/flowbite/**/*.js',
+  ],
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      orange: {
+        50: '#fef8f6',
+        100: '#fdf1ec',
+        200: '#fadbd1',
+        300: '#f7c5b5',
+        400: '#f19a7d',
+        500: '#eb6f45',
+        600: '#d4643e',
+        700: '#b05334',
+        800: '#8d4329',
+        900: '#733622',
+      },
+      plum: {
+        50: '#f8f4f8',
+        100: '#f1eaf1',
+        200: '#ddcadb',
+        300: '#c8aac5',
+        400: '#9f6a9a',
+        500: '#762a6e',
+        600: '#6a2663',
+        700: '#592053',
+        800: '#471942',
+        900: '#3a1536',
+      },
+      yellow: {
+        50: '#fffbf3',
+        100: '#fff7e7',
+        200: '#ffebc4',
+        300: '#ffdfa0',
+        400: '#ffc658',
+        500: '#ffae11',
+        600: '#e69d0f',
+        700: '#bf830d',
+        800: '#99680a',
+        900: '#7d5508',
+      },
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    opacity: {
+      0: '0',
+      20: '0.2',
+      40: '0.4',
+      60: '0.6',
+      80: '0.8',
+      100: '1',
+    },
+    extend: {
+      spacing: {
+        128: '32rem',
+        144: '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+    require('flowbite/plugin'),
+    require('nightwind'),
+    require('daisyui'),
+    require('@tailwindcss/line-clamp'),
+  ],
+  daisyui: {
+    styled: true,
+    themes: ['night'],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: '',
+  },
 }

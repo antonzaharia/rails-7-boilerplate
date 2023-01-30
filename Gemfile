@@ -73,3 +73,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "pry", "~> 0.14.2"
+
+gem "rspec-rails", "~> 6.0"
+
+gem "factory_bot_rails", "~> 6.2"
+
+gem "faker", "~> 3.1"
+
+gem "rails-controller-testing", "~> 1.0"
